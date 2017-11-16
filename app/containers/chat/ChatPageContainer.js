@@ -1,13 +1,14 @@
 // @flow
 import React, { Component } from 'react';
-import MessagesHistory from './components/messages_history/index';
+import ChatPage from './components/chat_page';
 
 export default class ChatPageContainer extends Component {
-  constructor() {
-    super();
-    this.state = { messages: [] }
+  constructor(props) {
+    super(props);
+    this.state = { messages: ["aaaa"] };
   }
+
   render() {
-    return <MessagesHistory/>;
+    return <ChatPage messages={this.state.messages} />;
   }
 }
