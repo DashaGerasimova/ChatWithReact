@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addMessage } from '../../../../actions/messages';
 
-let AddMessage = ({ dispatch }) => {
+let AddMessageField = ({ dispatch, onClick }) => {
   let input
 
   return (
@@ -22,13 +22,13 @@ let AddMessage = ({ dispatch }) => {
             input = node
           }}
         />
-        <button type="submit">
+        <button onClick={onClick}>
           Add Message
         </button>
       </form>
     </div>
   );
 }
-AddMessage = connect()(AddMessage)
+AddMessageField = connect()(AddMessageField)
 
-export default AddMessage
+export default AddMessageField

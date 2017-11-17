@@ -7,20 +7,18 @@ export default class ChatPageContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { messages: [] };
+    this.onSubmitClick = this.onSubmitClick.bind(this);
   }
 
-  componentDidMount() {
-    this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
-  }
-  componentWillUnmount() {
-    clearInterval(this.interval);
+  onSubmitClick() {
+  	console.log("clicked");
   }
 
   render() {
     return (
       <div>
         <MessagesList messages={this.state.messages}/>
-        <AddMessageField /> 
+        <AddMessageField onClick={this.onSubmitClick}/> 
       </div>
     );
   }
