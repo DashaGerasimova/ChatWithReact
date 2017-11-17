@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { addMessage } from '/app/actions/messages'
+import { connect } from 'react-redux';
+import { addMessage } from '../../../../actions/messages';
 
 let AddMessage = ({ dispatch }) => {
   let input
@@ -27,6 +27,8 @@ let AddMessage = ({ dispatch }) => {
         </button>
       </form>
     </div>
-  )
+  );
 }
 AddMessage = connect()(AddMessage)
+
+export default AddMessage

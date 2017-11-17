@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
-import MessagesList from './messages_list/index';
+import MessagesList from './components/messages_list/index';
+import AddMessageField from './components/message_field/index';
 
 export default class ChatPageContainer extends Component {
   constructor(props) {
@@ -8,15 +9,19 @@ export default class ChatPageContainer extends Component {
     this.state = { messages: [] };
   }
 
-  handleSubmit = () => {
-    this.props.onSubmit(this.state.value);
-    this.setState({
-      value: '',
-    });
-  };
+  componentDidMount() {
+    this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
   render() {
-    return <MessagesList messages={this.state.messages}/>;
-
+    return (
+      <div>
+        <MessagesList messages={this.state.messages}/>
+        <AddMessageField /> 
+      </div>
+    );
   }
 }

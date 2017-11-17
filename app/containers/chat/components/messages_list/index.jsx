@@ -6,7 +6,7 @@ export default function MessagesList(props) {
   return (
     <ul>
       {props.messages.map(message => (
-        <li>{message}</li>
+        <li key={message.id}>{message.text}</li>
       ))}
     </ul>
   );
