@@ -2,7 +2,7 @@
 import type { messagesStateType } from '../reducers/messges';
 
 let nextMessageId = 0
-export const addTodo = text => {
+export const addMessage = text => {
   return {
     type: 'ADD_MESSAGE',
     id: nextMessageId++,

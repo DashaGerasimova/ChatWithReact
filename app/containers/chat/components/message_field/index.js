@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
-import styles from './index.css';
+import { connect } from 'react-redux'
+import { addMessage } from '/app/actions/messages'
 
-class MessageField extends React.Component {
-  state = {
-    value: '',
-  };
+let AddMessage = ({ dispatch }) => {
+  let input
 
-  onChange = (e) => {
-    this.setState({
-      value: e.target.value,
-    })
-  };
-
-  handleSubmit = () => {
-    this.props.onSubmit(this.state.value);
-    this.setState({
-      value: '',
-    });
-  };
+  return (
+    <div>
+      <form
+        onSubmit={e => {
+          e.preventDefault()
+          if (!input.value.trim()) {
+            return
+          }
+          dispatch(addMessage(input.value))
+          input.value = ''
+        }}
+      >
+        <input
+          ref={node => {
+            input = node
+          }}
+        />
+        <button type="submit">
+          Add Message
+        </button>
+      </form>
+    </div>
+  )
+}
+AddMessage = connect()(AddMessage)
