@@ -2,7 +2,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
 import App from './containers/App';
-import ChatPage from './containers/chat/ChatPageContainer';
+import ChatPage from './containers/chat/chat_page';
 
 export default () => (
   <App>
