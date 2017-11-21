@@ -1,8 +1,8 @@
 /* eslint flowtype-errors/show-errors: 0 */
-import React from 'react';
-import { Switch, Route } from 'react-router';
-import App from './containers/App';
-import ChatPage from './containers/chat/chat_page';
+import React from 'react'
+import { Switch, Route } from 'react-router'
+import App from './containers/App'
+import ChatPage from './containers/chat/chat_page'
 
 export default () => (
   <App>
@@ -10,4 +10,4 @@ export default () => (
       <Route path="/" component={ChatPage} />
     </Switch>
   </App>
-);
+)
