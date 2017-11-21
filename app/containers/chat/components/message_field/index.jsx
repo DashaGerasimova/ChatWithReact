@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { addMessage } from '../../../../actions/messages';
-
-let AddMessageField = ({ dispatch, onClick }) => {
+let AddMessageField = ({ onSubmitClick }) => {
   let input
 
   return (
@@ -13,7 +10,7 @@ let AddMessageField = ({ dispatch, onClick }) => {
           if (!input.value.trim()) {
             return
           }
-          dispatch(addMessage(input.value))
+          onSubmitClick(input.value)
           input.value = ''
         }}
       >
@@ -22,13 +19,12 @@ let AddMessageField = ({ dispatch, onClick }) => {
             input = node
           }}
         />
-        <button onClick={onClick}>
+        <button>
           Add Message
         </button>
       </form>
     </div>
   );
 }
-AddMessageField = connect()(AddMessageField)
 
 export default AddMessageField

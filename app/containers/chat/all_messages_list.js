@@ -8,14 +8,8 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-  }
-}
-
 const AllMessagesList = connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(MessagesList)
 
 export default AllMessagesList;

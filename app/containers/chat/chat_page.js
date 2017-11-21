@@ -1,5 +1,5 @@
 import React from 'react'
-import AddMessage from './components/message_field'
+import AddMessage from './add_message'
 import MessagesList from './all_messages_list'
 
 const ChatPage = () => (
