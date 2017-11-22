@@ -1,16 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-
-function AllMessagesList({ data: { allMessages } }) {
-  return (
-    <ul>
-      {allMessages.map(({ id, text }) => (
-        <li key={id}>{text}</li>
-      ))}
-    </ul>
-  );
-}
+import MessagesList from './components/messages_list/index'
 
 const ALL_MESSAGES_QUERY = gql`
   query AllMessagesQuery {
@@ -23,7 +14,7 @@ const ALL_MESSAGES_QUERY = gql`
 const AllMessagesLoaded = graphql(ALL_MESSAGES_QUERY)(({ data }) => {
   if (data.loading) return <div>loading...</div>;
   return (
-    <AllMessagesList data={data}/>
+    <MessagesList messages={data.allMessages}/>
   )
 })
 export default AllMessagesLoaded;
