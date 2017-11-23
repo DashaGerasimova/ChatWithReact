@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-let AddMessageField = ({ onSubmitClick }) => {
+let AddMessageField = ({ submit }) => {
   let input
 
   return (
@@ -10,7 +10,7 @@ let AddMessageField = ({ onSubmitClick }) => {
           if (!input.value.trim()) {
             return
           }
-          onSubmitClick(input.value)
+          submit(input.value)
           input.value = ''
         }}
       >

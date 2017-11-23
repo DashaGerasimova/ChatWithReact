@@ -11,13 +11,4 @@ const MessagesList = ({ messages }) => (
   </ul>
 );
 
-MessagesList.propTypes = {
-  messages: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired
-    }).isRequired
-  ).isRequired
-};
-
 export default MessagesList;
