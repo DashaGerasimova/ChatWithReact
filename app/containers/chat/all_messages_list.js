@@ -11,6 +11,14 @@ const ALL_MESSAGES_QUERY = gql`
     }
   }
 `
+const MESSAGES_SUBSCRIPTION = gql`
+  subscription messageAdded($text: String!){
+    messageAdded(text: $text){
+      id
+      text
+    }
+  }
+`;
 const AllMessagesLoaded = graphql(ALL_MESSAGES_QUERY)(({ data }) => {
   if (data.loading) return <div>loading...</div>;
   return (

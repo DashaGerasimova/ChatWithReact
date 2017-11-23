@@ -194,11 +194,13 @@
     "apollo-client-preset": "^1.0.3",
     "apollo-link": "^1.0.3",
     "apollo-link-http": "^1.2.0",
+    "apollo-link-ws": "^1.0.1",
     "babel-plugin-relay": "^1.4.1",
     "devtron": "^1.4.0",
     "electron-debug": "^1.2.0",
     "font-awesome": "^4.7.0",
     "graphql": "^0.11.7",
+    "graphql-subscriptions": "^0.5.5",
     "graphql-tag": "^2.5.0",
     "history": "^4.6.3",
     "react": "^15.6.1",
@@ -213,7 +215,8 @@
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0",
     "relay-compiler": "^1.4.1",
-    "source-map-support": "^0.4.15"
+    "source-map-support": "^0.4.15",
+    "subscriptions-transport-ws": "^0.9.1"
   },
   "devEngines": {
     "node": ">=7.x",

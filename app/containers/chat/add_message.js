@@ -15,15 +15,6 @@ const CREATE_MESSAGE_MUTATION = gql`
     }
   }
 `
-
-const ALL_MESSAGES_QUERY = gql`
-  query AllMessagesQuery {
-    allMessages {
-      id
-      text
-    }
-  }
-`
 // 3
 export default graphql(CREATE_MESSAGE_MUTATION, {
   props: ({ mutate }) => ({
