@@ -189,6 +189,7 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "actioncable": "^5.1.4",
     "apollo-cache-inmemory": "^1.1.1",
     "apollo-client": "^2.0.3",
     "apollo-client-preset": "^1.0.3",
@@ -210,6 +211,7 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-router-redux": "^5.0.0-alpha.6",
+    "redis": "^2.8.0",
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0",
     "relay-compiler": "^1.4.1",
