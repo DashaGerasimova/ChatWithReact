@@ -13,9 +13,9 @@ const ALL_MESSAGES_QUERY = gql`
     }
   }
 `
-class AllMessagesLoaded extends Component {
+class AllMessages extends Component {
   state = {
-    messages: []
+    messages: this.props.messages
   };
 
   componentWillMount() {
@@ -34,6 +34,13 @@ class AllMessagesLoaded extends Component {
     return <MessagesList messages={this.state.messages}/>
   }
 }
+
+const AllMessagesLoaded = graphql(ALL_MESSAGES_QUERY)(({ data }) => {
+  if (data.loading) return <div>loading...</div>;
+  return (
+    <AllMessages messages={data.allMessages}/>
+  )
+})
 
 export default AllMessagesLoaded;
 
