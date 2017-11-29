@@ -6,16 +6,21 @@ import { shallow } from 'enzyme';
 
 import MessageField from '../../app/containers/chat/components/message_field/index'
 
-it('should render field', () => {
-  const tree = toJson(shallow(<MessageField submit={()=>{}} />));
-  expect(tree).toMatchSnapshot();
-});
-	
-// it('should match its snapshot with items', () => {
-//   const items = ['message1', 'message2', 'message3'];
-//   const tree = renderer.create(
-//     <List messages={items} />
-//   ).toJSON();
+describe('MessageField component', () => {
+  it('should render field', () => {
+    const tree = toJson(shallow(<MessageField submit={()=>{}} />));
+    expect(tree).toMatchSnapshot();
+  });
 
-// expect(tree).toMatchSnapshot();
-// });
+  const test_submit = (text) => {
+  	
+  }  
+	
+  // it('should ', () => {
+  //   const field = shallow(<MessageField submit={test_submit} />)
+  //   const tree = renderer.create(
+  //     <List messages={items} />
+  //   ) .toJSON();
+  // expect(tree).toMatchSnapshot();
+  // });
+})

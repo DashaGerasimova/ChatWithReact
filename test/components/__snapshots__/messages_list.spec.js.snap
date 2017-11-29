@@ -1,11 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match its snapshot with items 1`] = `
+exports[`List component should match its snapshot with items 1`] = `
 <ul>
-  <li />
-  <li />
-  <li />
+  <li>
+    hello
+  </li>
+  <li>
+    world
+  </li>
+  <li>
+    !
+  </li>
 </ul>
 `;
 
-exports[`should render a todo item  1`] = `<ul />`;
+exports[`List component should render a todo item  1`] = `<ul />`;
