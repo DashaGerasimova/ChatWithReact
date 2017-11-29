@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render field 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input />
+    <button>
+      Add Message
+    </button>
+  </form>
+</div>
+`;

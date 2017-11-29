@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match its snapshot with items 1`] = `
+<ul>
+  <li />
+  <li />
+  <li />
+</ul>
+`;
+
+exports[`should render a todo item  1`] = `<ul />`;
