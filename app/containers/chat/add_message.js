@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import MessageField from './components/message_field/index'
-import { addMessage } from '../../actions/messages'
 
 const CREATE_MESSAGE_MUTATION = gql`
   mutation CreateMessageMutation($text: String!) {
